@@ -3,7 +3,7 @@ version: 0.2
 env:
   variables:
     BUILD_ENV: "production"
-    S3_BUCKET: "quote-app"
+    S3_BUCKET: "quote-app-fe"
     CLOUDFRONT_DIST_ID: "E3FIEY0K2SL0XI"
 
 phases:
