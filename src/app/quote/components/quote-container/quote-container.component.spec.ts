@@ -64,15 +64,15 @@ describe('QuoteContainerComponent', () => {
 
     it('should invoke getRandom method of QuoteService and update status after quote$ has been changes',
       waitForAsync(inject([ QuoteService ], quoteService => {
-          const spy = spyOn(quoteService, 'getRandom').and.returnValue(of(testQuote));
+        const spy = spyOn(quoteService, 'getRandom').and.returnValue(of(testQuote));
 
-          component.getRandomQuote();
+        component.getRandomQuote();
 
-          component.isRefreshBtnClicked$.subscribe(isClicked => {
-            expect(spy).toHaveBeenCalled();
-            expect(isClicked).toBe(false);
-          });
-        }),
+        component.isRefreshBtnClicked$.subscribe(isClicked => {
+          expect(spy).toHaveBeenCalled();
+          expect(isClicked).toBe(false);
+        });
+      }),
       ));
 
     it('should stop emitting values on destroy', inject([ QuoteService ], quoteService => {
