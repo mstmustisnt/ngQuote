@@ -10,7 +10,7 @@ import { NgxSmartModalServiceMock } from '../../stub';
 import { MockQuoteComponent } from '../quote/quote.component.mock';
 import { QuoteContainerComponent } from './quote-container.component';
 
-xdescribe('QuoteContainerComponent', () => {
+describe('QuoteContainerComponent', () => {
   let component: QuoteContainerComponent;
   let fixture: ComponentFixture<QuoteContainerComponent>;
 
@@ -82,18 +82,6 @@ xdescribe('QuoteContainerComponent', () => {
 
       expect(spy).not.toHaveBeenCalled();
     }));
-
-  });
-
-  describe('events', () => {
-    it('should handle dbclick event and invoke getRandomQuote method', () => {
-      const spy = spyOn(component, 'getRandomQuote');
-
-      fixture.debugElement.nativeElement.dispatchEvent(new MouseEvent('dblclick', { cancelable: true }));
-      fixture.debugElement.nativeElement.dispatchEvent(new MouseEvent('click', { cancelable: true }));
-
-      expect(spy).toHaveBeenCalledTimes(1);
-    });
 
   });
 
