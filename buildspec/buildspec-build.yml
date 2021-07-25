@@ -4,7 +4,7 @@ env:
   variables:
     BUILD_ENV: "production"
     S3_BUCKET: "quote-app"
-    CLOUDFRONT_DIST_ID: ""
+    CLOUDFRONT_DIST_ID: "E3FIEY0K2SL0XI"
 
 phases:
   install:
